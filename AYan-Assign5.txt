@@ -1,0 +1,141 @@
+Andy Yan
+Assignment 5 - Query Output and Explanations
+
+Question 1
+quantityOnHand
+--------------
+100
+
+Explanation: I find the antibiotics item and display its quantity on hand, which is the number of containers currently available.
+
+
+Question 2
+volunteerName
+-------------
+Gene Lewin
+
+Explanation: I keep volunteers whose phone numbers do not begin with 2 and whose last name is not Jones. Missing phone numbers do not meet the phone condition.
+
+
+Question 3
+volunteerName
+-------------
+George Brewer
+
+Explanation: I connect volunteers to their assigned tasks and check the task type. I show each volunteer assigned to a transporting task once.
+
+
+Question 4
+taskDescription
+------------------------------
+Prepare 100 food packages
+Take packages to the warehouse
+
+Explanation: I keep all tasks when joining them to assignments. Tasks with no matching volunteer assignment are the ones that have not been assigned.
+
+
+Question 5
+packageTypeName
+---------------
+food and water
+
+Explanation: I look for items with bottle in their description, then follow their packages to the package types. I list each matching type only once.
+
+
+Question 6
+itemDescription
+---------------------
+bottle of antibiotics
+bottle of aspirin
+flashlight
+pack of bandages
+
+Explanation: I compare the item list with the package contents. An item with no matching package is not included in any package.
+
+
+Question 7
+taskDescription
+------------------------------
+Prepare 20 children's packages
+Prepare 100 water packages
+Prepare 5,000 packages
+
+Explanation: I find volunteers whose addresses end in NJ and connect them to their assigned tasks. I display each task description once.
+
+
+Question 8
+volunteerName
+-------------
+Joan Simmons
+Chris Jordan
+
+Explanation: I select assignments that began from January 1 through June 30, 2021. Using July 1 as the exclusive end includes all times on June 30. I show each matching volunteer once.
+
+
+Question 9
+volunteerName
+-------------
+Julie White
+Gerry Banks
+
+Explanation: I follow each volunteer's packing assignments to the packages and their contents. If a package contains spam, I include the volunteer and remove repeated names.
+
+
+Question 10
+itemDescription
+---------------
+Baby formula
+
+Explanation: I multiply the unit value of each item by its quantity in one package. I list items whose value in at least one package is exactly $100.
+
+
+Question 11
+taskStatusName | volunteerCount
+---------------+---------------
+open           | 4
+closed         | 3
+ongoing        | 2
+pending        | 1
+
+Explanation: I group assignments by task status and count different volunteers in each group. A volunteer assigned to several tasks with the same status counts once for that status. The left joins keep all statuses, and the largest counts appear first.
+
+
+Question 12
+taskCode | totalWeight
+---------+------------
+106      | 308.0
+
+Explanation: I add the weights of all packages created by each task. I sort those totals from largest to smallest and return the task with the highest total weight.
+
+
+Question 13
+taskCount
+---------
+3
+
+Explanation: I match each task to its type, exclude packing tasks, and count the tasks that remain.
+
+
+Question 14
+itemDescription
+---------------
+can of spam
+dried fruit
+men's coat
+sleeping bag
+tent
+women's coat
+
+Explanation: I start with items that appear in packages and connect those packages to the volunteers assigned to their tasks. I treat those volunteers as the people who touched the items. I keep items linked to fewer than three different volunteers, counting each person only once per item.
+
+
+Question 15
+packageId | totalValue
+----------+-----------
+6         | 150.0
+2         | 151.0
+4         | 350.0
+10        | 750.0
+5         | 1420.0
+
+Explanation: I multiply each item's unit value by its quantity and add these amounts for each package. I keep packages worth more than $100 and sort them from lowest to highest value.
